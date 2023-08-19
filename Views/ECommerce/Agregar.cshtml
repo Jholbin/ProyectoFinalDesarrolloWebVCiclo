@@ -1,0 +1,30 @@
+﻿@model ProyectoFinalDesarrolloWeb.Models.Libro
+<div>
+    <h4>Libro Seleccionado</h4>
+    <hr />
+    <dl class="row">
+        <dt calss="col-sm-2">@Html.DisplayNameFor(model => model.LibroID)</dt>
+        <dd calss="col-sm-10">@Html.DisplayFor(model => model.LibroID)</dd>
+        <dt calss="col-sm-2">@Html.DisplayNameFor(model => model.Titulo)</dt>
+        <dd calss="col-sm-10">@Html.DisplayFor(model => model.Titulo)</dd>
+        <dt calss="col-sm-2">@Html.DisplayNameFor(model => model.Genero)</dt>
+        <dd calss="col-sm-10">@Html.DisplayFor(model => model.Genero)</dd>
+        <dt calss="col-sm-2">@Html.DisplayNameFor(model => model.Precio)</dt>
+        <dd calss="col-sm-10">@Html.DisplayFor(model => model.Precio)</dd>
+        <dt calss="col-sm-2">@Html.DisplayNameFor(model => model.Stock)</dt>
+        <dd calss="col-sm-10">@Html.DisplayFor(model => model.Stock)</dd>
+
+    </dl>
+</div>
+
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.Hidden("LibroID",Model.LibroID)
+        <em>Ingrese la Cantidad</em>
+        @Html.TextBox("Stock",1)
+        <input type="submit" value="Agregar" class="btn btn-primary" style="background-color: salmon; border-color: salmon;" />
+        <a asp-action="Canasta" asp-controller="ECommerce" class="btn btn-primary" style="background-color: salmon; border-color: salmon;">Ir a la Canasta</a>
+    }
+</div>
+<div>@ViewBag.mensaje</div>

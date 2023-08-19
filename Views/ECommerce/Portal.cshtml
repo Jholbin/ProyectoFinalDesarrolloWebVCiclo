@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ProyectoFinalDesarrolloWeb.Models.Libro>
+
+<link rel="stylesheet" href="~/css/estilos.css" />
+<h2>Rincón de Letras</h2>
+<div class="d-flex justify-content-between">
+    <a asp-action="Canasta" asp-controller="ECommerce" class="btn btn-primary" style="background-color: salmon; border-color: salmon;">Ir a la Canasta</a>
+    <a asp-action="EditarUsuario" asp-controller="User" asp-route-id="@ViewBag.IdUsuario" class="btn btn-primary" style="background-color: salmon; border-color: salmon;">Actualiza tu Cuenta</a>
+</div>
+
+<body style="background-color:#CCCCCC">
+<div class="portal">
+    @foreach(var item in Model)
+    {
+        <div class="registro">
+            <br/>
+            <em>Titulo :</em>@Html.DisplayFor(Item => item.Titulo)
+            <br/>
+            <em>Autor :</em>@Html.DisplayFor(Item => item.Autor)
+            <br />
+            <em>Genero :</em>@Html.DisplayFor(Item => item.Genero)
+            <br />
+            <em>Precio :</em>@Html.DisplayFor(Item => item.Precio)
+            <br />
+            <em>Stock :</em>@Html.DisplayFor(Item => item.Stock)
+            <br />
+            <br />
+                @Html.ActionLink("Agregar", "Agregar", new {id = item.LibroID}, new { @class = "btn btn-warning" })
+        </div>
+    }
+</div>
+
+<p style="text-align:center">
+        <a asp-controller="Autenticacion" asp-action="Salir" class="btn btn-danger" style="">Cerrar Sesion</a>
+</p>
+
+</body>

@@ -1,0 +1,22 @@
+﻿@model ProyectoFinalDesarrolloWeb.Models.Libro
+@{
+    ViewBag.Title = "Libro";
+
+}
+
+<h1 style="text-align:center;color:red"> Registro de Libros</h1>
+
+<h2 style="text-align:center">Titulo : @Model.Titulo</h2>
+<h2 style="text-align:center">Autor : @Model.Autor</h2>
+<h2 style="text-align:center">idGenero : @Model.idGenero</h2>
+<h2 style="text-align:center">Precio: @Model.Precio</h2>
+<h2 style="text-align:center">Stock: @Model.Stock</h2>
+
+
+<h3 style="text-align:center">
+    @ViewBag.mensaje
+</h3>
+
+<h2 style="text-align:center">
+    <a asp-controller="Discos" asp-action="Listado">Ver Listado de Libros</a>
+</h2>

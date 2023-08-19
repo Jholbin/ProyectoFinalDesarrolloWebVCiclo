@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ProyectoFinalDesarrolloWeb.Models.Item>
+
+@{
+    ViewData["Title"] = "Canasta";
+}
+
+<h1>Canasta</h1>
+
+<p><a asp-action="Portal" class="btn btn-primary"style="background-color: salmon; border-color: salmon;">Ver mas Libros</a></p>
+<table class="table">
+    <thead>
+
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {<tr>
+            <td>@Html.DisplayFor(modelItem => item.LibroID)</td>
+            <td>@Html.DisplayFor(modelItem => item.Titulo)</td>
+            <td>@Html.DisplayFor(modelItem => item.Genero)</td>
+            <td>@Html.DisplayFor(modelItem => item.Precio)</td>
+            <td>@Html.DisplayFor(modelItem => item.Stock)</td>
+            <td>@Html.DisplayFor(modelItem => item.monto)</td>
+                <td>@Html.DisplayFor(modelItem => item.nombreusuario)</td>
+            <td>@Html.ActionLink("Delete", "Delete", new {id=item.LibroID})</td>
+        </tr>
+        }
+    </tbody>
+</table>

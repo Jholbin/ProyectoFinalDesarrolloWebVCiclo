@@ -1,0 +1,89 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ProyectoFinalDesarrolloWeb
+build_property.RootNamespace = ProyectoFinalDesarrolloWeb
+build_property.ProjectDir = D:\5to nivel cursos\desarrollo de servicios web\proyectos\ProyectoFinalDesarrolloWeb\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\5to nivel cursos\desarrollo de servicios web\proyectos\ProyectoFinalDesarrolloWeb
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/Autenticacion/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0ZW50aWNhY2lvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/Autenticacion/Mensaje.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0ZW50aWNhY2lvblxNZW5zYWplLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/ECommerce/Agregar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRUNvbW1lcmNlXEFncmVnYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/ECommerce/Canasta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRUNvbW1lcmNlXENhbmFzdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/ECommerce/Portal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRUNvbW1lcmNlXFBvcnRhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/Libro/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/Libro/Libro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cTGlicm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/Libro/listadoLibros.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cbGlzdGFkb0xpYnJvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/Libro/Registro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cUmVnaXN0cm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/User/EditarUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0YXJVc3VhcmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/User/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5to nivel cursos/desarrollo de servicios web/proyectos/ProyectoFinalDesarrolloWeb/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ndpl2i0xw3

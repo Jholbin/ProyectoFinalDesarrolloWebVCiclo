@@ -1,0 +1,40 @@
+﻿@model ProyectoFinalDesarrolloWeb.Models.User
+
+@{
+    ViewBag.Title = "Registro de Usuario";
+}
+<h1 style="text-align:center">Nuevo Usuario</h1>
+<div>
+    <form asp-controller="User" asp-action="Registro">
+        <label>Usuario</label>
+        <input asp-for="usuario" class="form-control" style="text-align:center" required />
+        <span asp-validation-for="usuario" class="text-danger"></span>
+
+        <label>Contraseña</label>
+        <input asp-for="clave" class="form-control" style="text-align:center" required />
+        <span asp-validation-for="clave" class="text-danger"></span>
+
+        <label>Correo Electrónico</label>
+        <input asp-for="correo" class="form-control" style="text-align:center" required />
+        <span asp-validation-for="correo" class="text-danger"></span>
+
+        <label>Dirección</label>
+        <input asp-for="direccion" class="form-control" style="text-align:center" required />
+        <span asp-validation-for="direccion" class="text-danger"></span>
+
+        <label>Seleccione un Genero</label>
+        <select asp-for="idSexo" class="form-control" style="text-align:center">
+            <option value="">Seleccione un tipo</option>
+            @foreach (var tipo in ViewBag.TiposDeSexo)
+            {
+                <option value="@tipo.idSexo">@tipo.desSexo</option>
+            }
+        </select>
+
+        </br>
+        <p style="text-align:center">
+            <input type="submit" value="Registar" class="btn btn-warning" />
+        </p>
+
+    </form>
+</div>

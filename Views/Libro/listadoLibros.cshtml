@@ -1,0 +1,132 @@
+﻿@model IEnumerable<ProyectoFinalDesarrolloWeb.Models.Libro>
+
+@{
+    ViewData["Title"] = "ListadoLibros";
+
+}
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<h1 style="text-align:center">Listado de Libros</h1>
+
+<p style="text-align:center">
+    <a asp-controller="Libro" asp-action="Libro" class="btn btn-primary">Registrar Nuevo</a>
+</p>
+<p style="text-align:center">
+    <a asp-controller="Autenticacion" asp-action="Salir" class="btn btn-primary">Cerrar Sesion</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LibroID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Autor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stock)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LibroID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Autor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Precio)
+                </td>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Stock)
+                </th>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id=item.LibroID },new{@class="btn btn-primary",@role="button"}) |
+                    @*   @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+                    @Html.ActionLink("Eliminar", "Delete", new { id=item.LibroID },new{@class="btn btn-danger", @role="button" ,@id="eliminar"})
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div style="text-align:center">
+    @for (int i = 0; i < (int)ViewBag.paginas; i++)
+    {
+        @Html.ActionLink((i+1).ToString(),"ListadoLibros","Libro",new{p=i},new{@class="btn btn-danger"})
+        ;
+
+    }
+</div>
+<p style="text-align:center">
+    <a asp-controller="Autenticacion" asp-action="Salir" class="btn btn-danger">Cerrar Sesion</a>
+</p>
+@section Scripts{
+
+    <script>
+        $(document).ready(function () {
+
+            $("tr #eliminar").click(function (y) {
+                //evita el reinicio...
+                y.preventDefault();
+                Swal.fire({
+                    title: 'Eliminar Registro',
+                    text: "Usted desea Eliminar el Registro?",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'SI, ELIMINAR REGISTRO!',
+                    cancelButtonText: 'Desea Cancelar?'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        //capturamos el href...(controlador y accion)
+                        //y lo almacenamos en la variable url...
+                        var url = $("#eliminar").attr("href");
+                        //aplicamos ajax
+                        $.ajax({
+                            url: url,
+                            async: true,
+                            success: function (r) {
+                                //vemos respuesta del servidor...
+                                console.log(r);
+
+                            }   //fin del success
+
+                        })    //fin de ajax...
+                        setTimeout(function () {
+                            //tiempo de actualizado de la pagina donde ajax realiza la accion.
+                            parent.location = "Libro/listadoLibros"
+
+                        }, 1000)   //fin del settimeout........
+
+                    }    //fin del if...
+                })
+            }) //  fin del evento click...
+        })   //fin de jquery...
+
+    </script>
+
+ }

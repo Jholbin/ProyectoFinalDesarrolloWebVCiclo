@@ -1,0 +1,63 @@
+﻿@model ProyectoFinalDesarrolloWeb.Models.User
+
+@{
+    ViewData["Title"] = "Editar Usuario";
+}
+
+<h1>Editar</h1>
+
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <form asp-action="EditarUsuario">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="idusuario" class="control-label"></label>
+                <input asp-for="idusuario" class="form-control" readonly />
+                <span asp-validation-for="idusuario" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="usuario" class="control-label"></label>
+                <input asp-for="usuario" class="form-control" required />
+                <span asp-validation-for="usuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="clave" class="control-label"></label>
+                <input asp-for="clave" class="form-control" required />
+                <span asp-validation-for="clave" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="correo" class="control-label"></label>
+                <input asp-for="correo" class="form-control" required />
+                <span asp-validation-for="correo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="direccion" class="control-label"></label>
+                <input asp-for="direccion" class="form-control" required />
+                <span asp-validation-for="direccion" class="text-danger"></span>
+            </div>
+
+            <label>Genero</label>
+            <select asp-for="idSexo" class="form-control" style="text-align:center" >
+            <option value="">Seleccione un tipo</option>
+                @foreach (var tipo in ViewBag.TiposDeSexo)
+                {
+                    <option value="@tipo.idSexo">@tipo.desSexo</option>
+                }
+            </select>
+
+            <div class="form-group">
+                <input type="submit" value="Actualizar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

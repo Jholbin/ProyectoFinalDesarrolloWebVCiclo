@@ -1,0 +1,64 @@
+﻿@model ProyectoFinalDesarrolloWeb.Models.User
+
+@{
+    Layout = null;
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Logueo</title>
+</head>
+<body style=" background-color:#CCCCCC">
+    <h2  style="text-align:center ">Bienvenido a la Libreria Rincón de Letras </h2>
+    <h4 class="" style="text-align:center">Iniciar Sesion</h4>
+    <hr />
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <form asp-action="Index">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group" style="display:none">
+                    <label asp-for="idusuario" class="control-label"></label>
+                    <input asp-for="idusuario" class="form-control" />
+                    <span asp-validation-for="idusuario" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="usuario" class="control-label"></label>
+                    <input asp-for="usuario" class="form-control" />
+                    <span asp-validation-for="usuario" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="clave" class="control-label"></label>
+                    <input asp-for="clave" class="form-control" type="password" />
+                    <span asp-validation-for="clave" class="text-danger"></span>
+                </div>
+                <br />
+                <div class="form-group justify-content-center" style="text-align:center">
+                    <input type="submit" value="Iniciar Sesion" class="btn btn-primary justify-content-center" style="background-color: salmon; border-color: salmon;" />
+                </div>
+            </form>
+            <br />
+            <h5>¿Usuario Nuevo? </h5>
+            <br />
+            <form asp-controller="User" asp-action="Users">
+                <div class="form-group justify-content-center" style="text-align:center">
+                    <input type="submit" value="Registrarse" class="btn btn-primary justify-content-center" style="background-color: salmon; border-color: salmon;" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+    -->
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+</body>
+</html>
